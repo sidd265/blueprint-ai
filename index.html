@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUEPRINT AI - Transform Ideas into Product Requirements</title>
+    <meta name="description" content="AI-powered tool that transforms product ideas into comprehensive PRDs. Generate professional Product Requirements Documents with card-based layout, export options, and Fortune 500 quality content.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="PRD generator, product requirements document, AI PRD, product management, startup tools, MVP documentation, business documents, Gemini AI, product development">
+    <meta name="author" content="Blueprint AI Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BLUEPRINT AI - Transform Ideas into Enterprise-Grade PRDs">
+    <meta property="og:description" content="AI-powered tool that transforms product ideas into comprehensive PRDs. Generate professional Product Requirements Documents with Fortune 500 quality content.">
+    <meta property="og:url" content="https://your-site-name.netlify.app">
+    <meta property="og:site_name" content="Blueprint AI">
+    <meta property="og:image" content="https://your-site-name.netlify.app/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BLUEPRINT AI - Transform Ideas into Enterprise-Grade PRDs">
+    <meta name="twitter:description" content="AI-powered tool that transforms product ideas into comprehensive PRDs with professional card-based layout.">
+    <meta name="twitter:image" content="https://your-site-name.netlify.app/og-image.png">
+    <meta name="twitter:creator" content="@blueprintai">
+    <meta name="twitter:site" content="@blueprintai">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Blueprint AI">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-site-name.netlify.app">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%2280%22 height=%2280%22 x=%2210%22 y=%2210%22 rx=%228%22 fill=%22%232563eb%22/></svg>">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg class="brand-icon" viewBox="0 0 32 32" width="28" height="28">
+                    <circle cx="16" cy="16" r="15" fill="#2563eb"/>
+                    <path d="M16 3 a13 13 0 0 1 9.192 3.808 L16 16 Z" fill="#ffffff" opacity="0.9"/>
+                    <path d="M16 16 L25.192 6.808 a13 13 0 0 1 3.808 9.192 Z" fill="#ffffff" opacity="0.7"/>
+                    <path d="M16 16 L29 16 a13 13 0 0 1 -3.808 9.192 Z" fill="#ffffff" opacity="0.5"/>
+                </svg>
+                <span class="brand-text">blueprint ai</span>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn" id="newPrdBtn">
+                    <span>New PRD</span>
+                </button>
+                <button class="nav-btn" id="exportBtn">
+                    <span>Export</span>
+                </button>
+                <button class="nav-btn" id="settingsBtn">
+                    <span>Settings</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Idea Input Section -->
+        <section class="idea-input-section" id="ideaInputSection">
+            <div class="input-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        AI-Powered Product Development
+                    </div>
+                    
+                    <h1 class="hero-title">Turn Ideas into Enterprise-Grade PRDs</h1>
+                    
+                    <p class="hero-subtitle">
+                        Transform your product vision into comprehensive Product Requirements Documents with AI. 
+                        Get professional, structured documentation that Fortune 500 companies trust.
+                    </p>
+                    
+                    <div class="hero-features">
+                        <div class="hero-feature">Professional Templates</div>
+                        <div class="hero-feature">AI-Generated Content</div>
+                        <div class="hero-feature">Export Ready</div>
+                    </div>
+                    
+                    <!-- Hero Input Section -->
+                    <div class="hero-input-section">
+                        <div class="input-group">
+                            <textarea 
+                                id="ideaInput" 
+                                class="hero-textarea" 
+                                placeholder="Describe your product idea here... (e.g., An app that connects local dog walkers with pet owners)"
+                                rows="3"
+                            ></textarea>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <div class="hero-options">
+                                <label class="hero-checkbox">
+                                    <input type="checkbox" id="mvpOnly" checked>
+                                    <span class="hero-checkmark"></span>
+                                    MVP Focus
+                                </label>
+                                <label class="hero-checkbox">
+                                    <input type="checkbox" id="includeWireframes">
+                                    <span class="hero-checkmark"></span>
+                                    Include Wireframes
+                                </label>
+                            </div>
+                            
+                            <button class="hero-generate-btn" id="generateBtn">
+                                <span class="btn-text">Generate PRD</span>
+                                <div class="btn-loading hidden">
+                                    <div class="spinner"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="examples-section">
+                    <h3 class="examples-title">Example Ideas</h3>
+                    <div class="examples-grid">
+                        <div class="example-card" data-example="I want to create a meal planning app for busy professionals that suggests healthy recipes based on dietary preferences and automatically generates shopping lists.">
+                            <div class="example-text">Meal Planning App</div>
+                        </div>
+                        <div class="example-card" data-example="A platform that helps small businesses manage their social media presence by scheduling posts, analyzing engagement, and suggesting content ideas.">
+                            <div class="example-text">Social Media Manager</div>
+                        </div>
+                        <div class="example-card" data-example="An educational platform where students can find and book tutoring sessions with verified tutors, track progress, and access practice materials.">
+                            <div class="example-text">Tutoring Platform</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRD Editor Section -->
+        <section class="prd-editor-section hidden" id="prdEditorSection">
+            <div class="editor-container">
+                <!-- Document Toolbar -->
+                <div class="document-toolbar">
+                    <div class="toolbar-title">BLUEPRINT AI - Product Requirements Document</div>
+                    <div class="toolbar-actions">
+                        <button class="action-btn secondary" id="backToIdeaBtn">
+                            <span>Back to Ideas</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Document Content -->
+                <div class="document-content">
+                    <!-- PRD Header -->
+                    <div class="prd-header">
+                        <div class="prd-title-group">
+                            <h1 class="prd-title" id="prdTitle">Product Requirements Document</h1>
+                            <p class="prd-subtitle" id="prdSubtitle">Generated from your idea</p>
+                        </div>
+                    </div>
+
+                    <!-- PRD Blocks -->
+                    <div class="prd-blocks" id="prdBlocks">
+                        <!-- Blocks will be generated here -->
+                    </div>
+
+                    <!-- Add Block Button -->
+                    <div class="add-block-section">
+                        <button class="add-block-btn" id="addBlockBtn">
+                            <span>Add Section</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay hidden" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Settings</h2>
+                <button class="modal-close" id="closeSettingsBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="generationMode" class="form-label">Generation Mode</label>
+                    <select id="generationMode" class="form-select">
+                        <option value="balanced">Balanced - Comprehensive but concise</option>
+                        <option value="detailed">Detailed - In-depth analysis</option>
+                        <option value="quick">Quick - Essential sections only</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn secondary" id="cancelSettingsBtn">Cancel</button>
+                <button class="btn primary" id="saveSettingsBtn">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Modal -->
+    <div class="modal-overlay hidden" id="exportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Export PRD</h2>
+                <button class="modal-close" id="closeExportBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="export-options">
+                    <button class="export-option" id="exportMarkdown">
+                        <div class="export-info">
+                            <h3>Markdown</h3>
+                            <p>Plain text format for documentation</p>
+                        </div>
+                    </button>
+                    <button class="export-option" id="exportPdf">
+                        <div class="export-info">
+                            <h3>PDF</h3>
+                            <p>Professional document format</p>
+                        </div>
+                    </button>
+                    <button class="export-option" id="exportJson">
+                        <div class="export-info">
+                            <h3>JSON</h3>
+                            <p>Structured data format</p>
+                        </div>
+                    </button>
+                    <button class="export-option" id="copyToClipboard">
+                        <div class="export-info">
+                            <h3>Copy to Clipboard</h3>
+                            <p>Copy formatted text</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Block Modal -->
+    <div class="modal-overlay hidden" id="addBlockModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add Section</h2>
+                <button class="modal-close" id="closeAddBlockBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="block-types">
+                    <button class="block-type" data-type="executive">
+                        <div class="block-info">
+                            <h3>Executive Summary</h3>
+                            <p>High-level overview and business impact</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="problem">
+                        <div class="block-info">
+                            <h3>Problem Statement & Market Opportunity</h3>
+                            <p>Market research and competitive analysis</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="solution">
+                        <div class="block-info">
+                            <h3>Product Solution & Strategy</h3>
+                            <p>Strategic approach and value proposition</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="users">
+                        <div class="block-info">
+                            <h3>Target Market & User Personas</h3>
+                            <p>Detailed personas and market segments</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="features">
+                        <div class="block-info">
+                            <h3>Product Features & Requirements</h3>
+                            <p>Prioritized features with acceptance criteria</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="stories">
+                        <div class="block-info">
+                            <h3>User Stories & Acceptance Criteria</h3>
+                            <p>Detailed user journeys and edge cases</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="metrics">
+                        <div class="block-info">
+                            <h3>Success Metrics & KPIs</h3>
+                            <p>Quantifiable business and product metrics</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="technical">
+                        <div class="block-info">
+                            <h3>Technical Architecture & Implementation</h3>
+                            <p>System design and technology stack</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="timeline">
+                        <div class="block-info">
+                            <h3>Development Timeline & Milestones</h3>
+                            <p>Project phases and delivery schedule</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="risks">
+                        <div class="block-info">
+                            <h3>Risk Assessment & Mitigation</h3>
+                            <p>Risk analysis and contingency planning</p>
+                        </div>
+                    </button>
+                    <button class="block-type" data-type="custom">
+                        <div class="block-info">
+                            <h3>Custom Section</h3>
+                            <p>Add your own professional section</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3 class="loading-title">Generating PRD</h3>
+            <p class="loading-subtitle">Analyzing your idea and creating a comprehensive document</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html> 

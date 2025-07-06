@@ -1,0 +1,64 @@
+{
+  "name": "blueprint-ai",
+  "version": "1.0.0",
+  "description": "AI-powered web application that transforms product ideas into comprehensive Product Requirements Documents (PRDs) with professional card-based layout",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server -p 8000 -o",
+    "dev": "npx live-server --port=8000 --open=/index.html",
+    "build": "echo 'No build step required - static files ready for deployment'",
+    "deploy": "echo 'Deploy to Netlify, Vercel, or GitHub Pages - see README.md'",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "blueprint-ai",
+    "prd",
+    "product-requirements-document",
+    "ai",
+    "gemini-ai",
+    "document-generation",
+    "product-management",
+    "startup-tools",
+    "business-documents",
+    "mvp",
+    "product-development",
+    "purple-theme",
+    "card-layout",
+    "responsive-design",
+    "netlify",
+    "vercel",
+    "github-pages",
+    "static-site",
+    "deployment-ready"
+  ],
+  "author": "Blueprint AI Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/blueprint-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/blueprint-ai/issues"
+  },
+  "homepage": "https://your-site-name.netlify.app",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "files": [
+    "index.html",
+    "style.css",
+    "script.js",
+    "netlify.toml",
+    "README.md"
+  ]
+} 
