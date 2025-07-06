@@ -5,6 +5,12 @@
   # Directory to publish (current directory)
   publish = "."
   
+# Make sure index.html is served for root
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+  
   # Functions directory (not needed for this project)
   # functions = "netlify/functions"
 
