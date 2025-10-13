@@ -19,7 +19,7 @@ A powerful web application that transforms product ideas into comprehensive Prod
 
 ## 🌐 Live Demo
 
-**[🚀 Try BLUEPRINT AI Now](https://your-site-name.netlify.app)**
+**[🚀 Try BLUEPRINT AI Now](https://aiblueprint.netlify.app/)**
 
 ## ⚡ Quick Deploy
 
