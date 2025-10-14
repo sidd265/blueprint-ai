@@ -1,8 +1,7 @@
 # 🚀 BLUEPRINT AI - Idea to PRD Generator
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://your-site-name.netlify.app)
+
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://aiblueprint.netlify.app/)
 
 A powerful web application that transforms product ideas into comprehensive Product Requirements Documents (PRDs) using AI. Built for product managers, entrepreneurs, and teams who need professional documentation fast.
 
